@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription à la plateforme</title>
+    <link rel="stylesheet" href="accueil.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(184, 138, 138);
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgb(184, 138, 138);
+            box-shadow: 0 0 10px  rgb(184, 138, 138);
+            border-radius: 5px;
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="telephone"],
+        input[type="adresse"],
+        input[type="classe"],
+        input[type="submit"],
+        select,
+        label{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #90969c;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color:  #90969c;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>Inscription à la plateforme</h1>
+    <form action="web.php" method="post" id="inscriptionForm">
+        <input type="text" name="nom" placeholder="Nom" required>
+        <input type="text" name="prenom" placeholder="Prénom" required>
+        <input type="text" name="telephone" placeholder="Telephone" required>
+        <input type="text" name="adresse" placeholder="Adresse" required>
+        <input type="text" name="classe" placeholder="Classe" required>
+        <input type="email" name="email" placeholder="Adresse e-mail" required>
+        <input type="password" name="mot_de_passe" placeholder="Mot de passe" required>
+        <label for="Ecole">ecole:</label>
+        <select id="ecole" name="ecole" required >
+            <option value="ESP">ESP</option>
+            <option value="Rose Diagne Lab">Rose Diagne Lab</option>
+            <option value="DEFAR sci">DEFAR sci</option>
+            <option value="Bakeli">Bakeli</option>
+            <option value="Xarala">Xarala</option>
+        </select>
+        <label for="Domaine">Domaine:</label>
+        <select id="domaine" name="domaine" required >
+            <option value="Informatique">Informatique</option>
+            <option value="Reseau Telecom">Reseau Telecom</option>
+            <option value="Mecanique">Mecanique sci</option>
+            <option value="Electronique">Electronique</option>
+        </select>
+        <label for="Niveau">Niveau:</label>
+        <select id="Niveau" name="Niveau" required >
+            <option value="Bac+1">Bac+1</option>
+            <option value="Bac+2">Bac+2</option>
+            <option value="Bac+3">Bac+3 sci</option>
+            <option value="Bac+4">Bac+4</option>
+            <option value="Bac+5">Bac+5</option>
+        </select>
+        <input type="submit" value="S'inscrire">
+    </form>
+</div>
+
+</body>
+</html>
